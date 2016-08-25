@@ -1,5 +1,6 @@
 package com.study.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+
+import pf.xqq.ShowVideo;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -26,7 +30,18 @@ public class ScrollingActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        Button btn_01 = (Button) findViewById(R.id.btn_01);
+        btn_01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    startActivity(new Intent(ScrollingActivity.this, ShowVideo.class));
+            }
+        });
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
